@@ -1,5 +1,11 @@
 .container{
-    color: white;
+    color: black;
+    margin: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+
 }
 
 .opcoesEdit{
