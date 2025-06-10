@@ -2,4 +2,34 @@
     color: black;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.caixaComScroll{
+      width: 40rem;
+      height: 15rem;
+      border: 1px solid #29273b;
+      padding: 10px;
+      overflow-y: scroll; /* ou auto */
+      background-color: #f9f9f9;
+    }
+.buttonEditavel{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.buttonEditavel button{
+    width: 20rem;
+    height: 4rem;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+input{
+    width: 20rem;
+    height: 2rem;
+    border: 1px solid #29273b;
 }
