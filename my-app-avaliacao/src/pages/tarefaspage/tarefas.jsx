@@ -2,8 +2,28 @@ import { Button } from "../../components/Button/button"
 import { Input } from "../../components/Input/input"
 import { Navbar } from "../../components/NavBar/navbar"
 import style from "./tarefas.module.css"
+import { useState } from "react";
 
 export function Tarefas(){
+    const [texto, setTexto] = useState('');
+    const [itens, setItens] = useState([]);
+
+    const adicionarTexto = () => {
+        if (texto.trim() !== '') {
+        setItens([...itens, texto]);
+        setTexto('');
+        }
+    };
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+        adicionarTexto();
+        }
+    };
+
+    const handleLimpar = () => {
+        setItens([])
+    };
+
     return(
         <>
         <Navbar/>
@@ -13,35 +33,30 @@ export function Tarefas(){
             
 
             <div class={style.caixaComScroll}>
-                <p>Conteúdo linha 1</p>
-                <p>Conteúdo linha 2</p>
-                <p>Conteúdo linha 3</p>
-                <p>Conteúdo linha 4</p>
-                <p>Conteúdo linha 5</p>
-                <p>Conteúdo linha 6</p>
-                <p>Conteúdo linha 7</p>
-                <p>Conteúdo linha 8</p>
-                <p>Conteúdo linha 9</p>
-                <p>Conteúdo linha 10</p>
-                <p>Conteúdo linha 11</p>
-                <p>Conteúdo linha 12</p>
-                <p>Conteúdo linha 13</p>
-                <p>Conteúdo linha 14</p>
-                <p>Conteúdo linha 15</p>
-                <p>Conteúdo linha 16</p>
-                <p>Conteúdo linha 17</p>
+                {itens.map((item, index) => (
+                <p key={index} style={{ margin: '4px 0' }}>
+                    {item}
+                </p>
+                ))}
             </div>
 
-            <Input/>
+            <Input
+                type="text"
+                placeholder="Digite sua tarefa..."
+                onChange={(e) => setTexto(e.target.value)}
+                value={texto}
+                onKeyPress={handleKeyPress}
+            />
+
             <div className={style.buttonEditavel}>
             <Button
                 type="submit"
-                onClick={""}
+                onClick={adicionarTexto}
                 title={'Adicionar'}
             />
             <Button
                 type="submit"
-                onClick={""}
+                onClick={handleLimpar}
                 title={'Limpar  tudo'}
             />
            </div>

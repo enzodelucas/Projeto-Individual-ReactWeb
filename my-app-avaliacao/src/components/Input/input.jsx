@@ -1,9 +1,12 @@
 import styles from "./input.module.css"
 
-export function Input(){
+export function Input({type, placeholder,onChange}){
     return(
         <input 
-            type="text"
-            className={styles.inputEdit} />
+            type={type}
+            placeholder={placeholder}
+            onChange={onChange}
+            className={styles.inputStyle}
+        />
     )
 }
