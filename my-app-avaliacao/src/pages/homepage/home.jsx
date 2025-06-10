@@ -8,10 +8,11 @@ export function HomePage(){
     return(
         <>
         <Navbar/>
+        <div className={styles.fantasmaEdit}></div>
         <div className={styles.container}>
             
             <ul className={styles.opcoesEdit}>
-                <li onClick={() => navigate("/tema")}>Tema Claro/Escuro</li>
+                <li onClick={() => navigate("/tema")}>Alterar tema</li>
                 <li onClick={() => navigate("/mensagem")}>Mensagem de Boas-Vindas</li>
                 <li onClick={() => navigate("/tarefas")}>Lista de Tarefas</li>
             </ul>
