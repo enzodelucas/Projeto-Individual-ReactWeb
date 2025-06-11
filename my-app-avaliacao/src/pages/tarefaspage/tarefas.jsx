@@ -22,6 +22,7 @@ export function Tarefas(){
 
     const handleLimpar = () => {
         setItens([])
+        setTexto('')
     };
 
     return(
