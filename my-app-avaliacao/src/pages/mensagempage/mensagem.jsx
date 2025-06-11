@@ -9,10 +9,10 @@ export function Mensagem(){
 
     function handleButtonEntrar() {
         if(textoButt === "Entrar"){
-            setTexto("Bem vindo")
+            setTexto("Bem Vindo!")
             setTextobutt("Sair")
         }else if(textoButt === "Sair"){
-            setTexto("Ola Mundo")
+            setTexto("Olá Mundo!")
             setTextobutt("Entrar")
         }
     }

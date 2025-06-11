@@ -12,9 +12,7 @@
       width: 40rem;
       height: 15rem;
       border: 1px solid #29273b;
-      padding: 10px;
       overflow-y: scroll; /* ou auto */
-      background-color: #f9f9f9;
     }
 .buttonEditavel{
     display: flex;

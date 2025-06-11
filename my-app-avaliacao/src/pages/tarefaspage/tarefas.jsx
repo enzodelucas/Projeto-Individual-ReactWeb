@@ -35,9 +35,11 @@ export function Tarefas(){
 
             <div class={style.caixaComScroll}>
                 {itens.map((item, index) => (
-                <p key={index} style={{ margin: '4px 0' }}>
-                    {item}
-                </p>
+                    
+                    <p key={index}>
+                        {item}
+                    </p>
+               
                 ))}
             </div>
 
@@ -45,7 +47,7 @@ export function Tarefas(){
                 type="text"
                 placeholder="Digite sua tarefa..."
                 onChange={(e) => setTexto(e.target.value)}
-                value={texto}
+                value={""}
                 onKeyPress={handleKeyPress}
             />
 

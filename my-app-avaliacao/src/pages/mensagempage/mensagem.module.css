@@ -20,17 +20,16 @@
 .boxMenor{
     width: 25rem;
     height: 20rem;
-    background-color: rgb(32, 26, 26);
+    background-color: #29273b;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    color: white;
 
 }
 
 .boxMenor h1{
-    background-color: rgb(32, 26, 26);
+    background-color: #29273b;
 }
 
 Button{
