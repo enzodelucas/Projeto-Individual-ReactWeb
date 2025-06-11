@@ -7,16 +7,17 @@
     align-items: center;
     padding-left: 1rem;
     padding-right: 1rem;
-    font-size: 1rem;
-}
-
-.homeEdit{
-    width: 3rem;
-    height: 3rem;
+    
 }
 
 .minhaFoto{
     width: 3rem;
     height: 3rem;
     border-radius: 50px;
+   
+}
+
+.navbarEdit i{
+    background-color: #29273b;
+    font-size: 3rem;
 }

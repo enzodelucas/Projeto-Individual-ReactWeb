@@ -6,11 +6,10 @@ export function Navbar() {
 
     return(
         <nav className={styles.navbarEdit}>
-            <img 
-                src="..\src\assets\home-alt-2.png" 
-                alt="home" 
-                onClick={() => navigate("/")}
-                className={styles.homeEdit}/>
+
+
+            < i onClick={() => navigate("/")} class='bxr  bx-home-alt-2'  ></i> 
+                
 
             <a href="https://www.linkedin.com/in/enzo-de-lucas-dias-de-oliveira-a7a822270" target="_blank"> 
                 <img 
