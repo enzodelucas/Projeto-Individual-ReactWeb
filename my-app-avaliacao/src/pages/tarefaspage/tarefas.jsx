@@ -1,4 +1,4 @@
-import { Button } from "../../components/Button/button"
+import { Button } from "../../Components/Button/button";
 import { Input } from "../../components/Input/input"
 import { Navbar } from "../../components/NavBar/navbar"
 import style from "./tarefas.module.css"
@@ -33,7 +33,7 @@ export function Tarefas(){
             
             
 
-            <div class={style.caixaComScroll}>
+            <div className={style.caixaComScroll}>
                 {itens.map((item, index) => (
                     
                     <p key={index}>

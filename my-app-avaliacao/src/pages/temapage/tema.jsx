@@ -1,28 +1,29 @@
-import { Navbar } from "../../components/NavBar/navbar"
-import styles from "./tema.module.css"
 import { useState } from "react";
+import styles from "../temapage/tema.module.css";
+import { Button } from "../../Components/Button/button";
+import { useNavigate } from "react-router-dom";
+import { Navbar } from "../../components/NavBar/navbar"
 
-export function Tema(){
-    const [tema, setTema] = useState("Tema claro")
-    const [mudarTema, setMudarTema] = useState("")
+export function Tema() {
+  const [claro, setClaro] = useState(true);
+  const navigate = useNavigate();
 
-    function handletema () {
-        if(tema === "Tema claro"){
-            setMudarTema("backgroudColor: white;")
-            setTema("Tema escuro")
-        }else if(tema === "Tema escuro"){
+  return (
+    <>
+        <Navbar/>
+        <div
+        className={`${styles.container} ${claro ? styles.claro : styles.escuro}`}
+        >
+        <div className={styles.buttonContainer}>
+            <Button
+            type="button"
+            title={`Tema ${claro ? "Escuro" : "Claro"}`}
+            onClick={() => setClaro(!claro)}
+            className={styles.button}
+            />
 
-            setTema("Tema Claro")
-        }
-    }
-
-    return(
-        <>
-            <Navbar/>
-            <div className={styles.body}>
-                
-            </div>
-        </>
-    )
-
+        </div>
+        </div>
+    </>
+  );
 }
